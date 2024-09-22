@@ -8,6 +8,12 @@
 
 (function() {
   "use strict";
+  
+
+  /**
+   *  // ฟังก์ชันเริ่มต้นแผนที่
+   */
+ 
 
   /**
    * Easy selector helper function
