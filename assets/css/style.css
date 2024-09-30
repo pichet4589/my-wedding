@@ -10,7 +10,9 @@
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: "Open Sans", sans-serif;
+  /* font-family: "Open Sans", sans-serif; */
+  font-family: 'Prompt', sans-serif;
+
   color: #272829;
 }
 
@@ -48,6 +50,36 @@ h6 {
                  0 0 30px rgba(255, 255, 255, 0.3);
   }
 }
+
+ /* Start Custom flip animation */
+.font-prompt {
+  font-family: 'Prompt', sans-serif;
+}
+
+/* Custom flip animation */
+.flip-card {
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  backface-visibility: hidden;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+ /* End Custom flip animation */
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -308,7 +340,7 @@ h6 {
 
 #hero:before {
   content: "";
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.2);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -344,7 +376,7 @@ h6 {
 #hero .social-links a {
   font-size: 24px;
   display: inline-block;
-  color: #78828c;
+  color: #ffffff;
   /* color: #45505b; */
   line-height: 1;
   margin-right: 20px;
