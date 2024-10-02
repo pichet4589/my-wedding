@@ -461,15 +461,23 @@
               <div class="email">
                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
-                <p>Pichet.s@j-dea.com<br/> CChutima25@gmail.com</p>
+                <p id="textToCopy">Pichet.s@j-dea.com<br/> CChutima25@gmail.com</p>   
               </div>
 
               <div class="phone">
                 <i class="bi bi-phone"></i>
                 <h4>Tel:</h4>
-                <p>099-8522995 (บอล)<br/>095-8213051 (แพม)</p>
+                <div class="text-[#728394] text-[14px] pl-[60px]">
+                  <div class="hover:text-[#0563bb] cursor-pointer" onclick="copyToClipboard('ball')"><span id="tel_ball">099-8522995</span> <span>(บอล)</span></div>
+                  <div class="hover:text-[#0563bb] cursor-pointer" onclick="copyToClipboard('pam')"><span id="tel_pam">095-8213051</span> <span>(แพม)</span></div>
+                </div>
               </div>
             </div>
+          </div>
+
+          <!-- Notification area -->
+          <div id="notification" class="hidden transition-opacity fixed top-10 w-[300px] left-1/2 transform -translate-x-1/2 bg-blue-500 shadow-lg shadow-blue-500/50 text-white text-center py-2 px-4 rounded shadow-md">
+            copied phone to clipboard!
           </div>
 
           <div class="col-lg-8 mt-5 mt-lg-0 flex  justify-center">

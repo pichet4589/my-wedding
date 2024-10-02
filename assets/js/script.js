@@ -11,4 +11,43 @@ function initMap() {
       position: sydney,
       map: map,
     });
+}
+
+// function copyToClipboard() {
+//   const textToCopy = document.getElementById('textToCopy').innerText;
+  
+//   // Copy the text inside the <p> tag to the clipboard
+//   navigator.clipboard.writeText(textToCopy).then(() => {
+//     alert("Text copied to clipboard!");
+//   }).catch(err => {
+//     console.error("Failed to copy: ", err);
+//   });
+// }
+
+function copyToClipboard(type) {
+  console.log('type :>> ', type);
+  let textToCopy = ''
+  if(type == "ball"){
+     textToCopy = document.getElementById('tel_ball').innerText;
+  }else{
+     textToCopy = document.getElementById('tel_pam').innerText;
   }
+  console.log('textToCopy :>> ', textToCopy);
+  navigator.clipboard.writeText(textToCopy).then(() => {
+    showNotification();
+  }).catch(err => {
+    console.error("Failed to copy: ", err);
+  });
+}
+
+function showNotification() {
+  const notification = document.getElementById('notification');
+  notification.classList.remove('hidden');
+  notification.classList.add('block');
+
+  // Remove the notification after 3 seconds
+  setTimeout(() => {
+    notification.classList.remove('block');
+    notification.classList.add('hidden');
+  }, 2000);
+}
